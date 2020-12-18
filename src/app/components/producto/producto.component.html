@@ -1,0 +1,25 @@
+<table class="table table-responsive">
+    <thead>
+      <tr>
+        <th scope="col-sm-2">ITEM</th>
+        <th scope="col-sm-2">CANTIDAD</th>
+        <th scope="col-sm-2">PRODUCTO</th>
+        <th scope="col-sm-2">PRECIO</th>
+        <th scope="col-sm-2">IMPORTE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of lista_">
+        <th >{{prod.IDPRODUCTO}}</th>
+        <td><div class="col-xs-1">
+          <input class="form-control"  type="text">
+        </div></td>
+        <td>{{prod.NOMPROD}}</td>
+        <td>{{prod.PRECIO}}</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <button class="btn btn-primary">REGISTRAR VENTA</button>
+  <button class="btn btn-danger">CANCELAR VENTA</button>

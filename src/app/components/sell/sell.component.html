@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col" style="margin-right:90px;">
+      <div style="padding-top: 50px" class="form-group mx-sm-3">
+        <form class="form-inline">
+          <div class="form-group mx-sm-3">
+            <label>Producto</label>
+          </div>
+          <div class="form-group mx-sm-3">
+            <select class="selectpicker" (change)="selectChanged($event)">
+              <option *ngFor="let item of lista_" [value]="item" >{{item.NOMPROD}}</option>
+         
+            </select>
+            
+          </div>
+          <button class="btn btn-primary" (click)="SaveProduct(item)" >Agregar</button>
+          <button class="btn btn-primary" (click)="clear()" >clear</button>
+
+        </form>
+        <br>
+        <app-producto ></app-producto>
+       
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header bg-primary">
+            <h5 class="card-title" style="color: white;">Total:</h5>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-auto">
+                  <label>Documento</label>
+                  <input type="text" name="nombre" class="form-control">
+                </div>
+                <div class="col-md-auto">
+                  <label>N° de Venta</label>
+                  <input type="text" name="nombre" class="form-control">
+                </div>
+              </div>
+              <label>Fecha Venta</label>
+              <input type="text" name="nombre" class="form-control">
+              <label>CLIENTE</label>
+              <input type="text" name="nombre" class="form-control">
+              <hr>
+              <label>SUBTOTAL</label>
+              <br>
+              <label>IGV</label>
+              <br>
+              <label>TOTAL</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
